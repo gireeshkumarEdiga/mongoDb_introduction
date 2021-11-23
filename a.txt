@@ -1,0 +1,118 @@
+Microsoft Windows [Version 10.0.19042.1348]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\LENOVO>mongo
+MongoDB shell version v5.0.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("50457429-ffe2-40ce-95de-9f19b587a7bd") }
+MongoDB server version: 5.0.4
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-11-22T15:22:01.261+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> use assignment
+switched to db assignment
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> use assinment
+switched to db assinment
+> db.assinment.insert({first_name:"girish",last_name:"ediga",email:"egireeshkumar@gmail.com"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"girish",last_name:"ediga",email:"egireeshkumar@gmail.com"})
+WriteResult({ "nInserted" : 1 })
+> show dbs
+admin      0.000GB
+assinment  0.000GB
+config     0.000GB
+local      0.000GB
+test       0.000GB
+> use assinment
+switched to db assinment
+> show collections
+assinment
+users
+> db.users
+assinment.users
+> db.users.find()
+{ "_id" : ObjectId("619d2021670dd42746991bda"), "first_name" : "girish", "last_name" : "ediga", "email" : "egireeshkumar@gmail.com" }
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("619d2021670dd42746991bda"),
+        "first_name" : "girish",
+        "last_name" : "ediga",
+        "email" : "egireeshkumar@gmail.com"
+}
+> db.users.insert({name:"mahesh",lastname:"v",email:"abc@com"})
+WriteResult({ "nInserted" : 1 })
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("619d2021670dd42746991bda"),
+        "first_name" : "girish",
+        "last_name" : "ediga",
+        "email" : "egireeshkumar@gmail.com"
+}
+{
+        "_id" : ObjectId("619d21ce670dd42746991bdb"),
+        "name" : "mahesh",
+        "lastname" : "v",
+        "email" : "abc@com"
+}
+> db.users.insertMany({name:"naveen"},{emsil:"fg@"},{lastname:"ert"},{mobile:908})
+uncaught exception: TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:307:17
+@(shell):1:1
+> db.users.insertMany([{name:"naveen"},{emsil:"fg@"},{lastname:"ert"},{mobile:908}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619d2384670dd42746991bdc"),
+                ObjectId("619d2384670dd42746991bdd"),
+                ObjectId("619d2384670dd42746991bde"),
+                ObjectId("619d2384670dd42746991bdf")
+        ]
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("619d2021670dd42746991bda"),
+        "first_name" : "girish",
+        "last_name" : "ediga",
+        "email" : "egireeshkumar@gmail.com"
+}
+{
+        "_id" : ObjectId("619d21ce670dd42746991bdb"),
+        "name" : "mahesh",
+        "lastname" : "v",
+        "email" : "abc@com"
+}
+{ "_id" : ObjectId("619d2384670dd42746991bdc"), "name" : "naveen" }
+{ "_id" : ObjectId("619d2384670dd42746991bdd"), "emsil" : "fg@" }
+{ "_id" : ObjectId("619d2384670dd42746991bde"), "lastname" : "ert" }
+{ "_id" : ObjectId("619d2384670dd42746991bdf"), "mobile" : 908 }
+>
+
