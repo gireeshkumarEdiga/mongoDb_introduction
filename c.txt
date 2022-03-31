@@ -1,0 +1,503 @@
+Microsoft Windows [Version 10.0.19044.1586]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\LENOVO>mongo
+MongoDB shell version v5.0.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("c9e083ee-df34-4b70-ab9b-b692dd8361b7") }
+MongoDB server version: 5.0.4
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-13T18:29:55.458+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+durgasoft   0.000GB
+eval        0.000GB
+films       0.000GB
+local       0.000GB
+movies      0.000GB
+test        0.000GB
+> use assignment
+switched to db assignment
+> show collections
+users
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c2d"),
+        "first_name" : "Court",
+        "last_name" : "Torrans",
+        "email" : "ctorrans1@youtube.com",
+        "gender" : "Male",
+        "ip_address" : "144.110.164.136",
+        "age" : 2
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c2e"),
+        "first_name" : "Calv",
+        "last_name" : "Haquard",
+        "email" : "chaquard2@ox.ac.uk",
+        "gender" : "Male",
+        "ip_address" : "69.242.5.214",
+        "age" : 3
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c33"),
+        "first_name" : "Farrel",
+        "last_name" : "Lamplough",
+        "email" : "flamplough7@1und1.de",
+        "gender" : "Male",
+        "ip_address" : "90.103.15.134",
+        "age" : 8
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c35"),
+        "first_name" : "Ashla",
+        "last_name" : "Footer",
+        "email" : "afooter9@illinois.edu",
+        "gender" : "Non-binary",
+        "ip_address" : "144.103.207.119",
+        "age" : 10
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c36"),
+        "first_name" : "Sela",
+        "last_name" : "Sherston",
+        "email" : "ssherstona@hibu.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "206.199.131.187",
+        "age" : 11
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c37"),
+        "first_name" : "Kurt",
+        "last_name" : "MacClenan",
+        "email" : "kmacclenanb@google.fr",
+        "gender" : "Bigender",
+        "ip_address" : "52.23.71.254",
+        "age" : 12
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c38"),
+        "first_name" : "Sydelle",
+        "last_name" : "Grandisson",
+        "email" : "sgrandissonc@constantcontact.com",
+        "gender" : "Non-binary",
+        "ip_address" : "30.197.218.169",
+        "age" : 13
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c39"),
+        "first_name" : "Hamlen",
+        "last_name" : "Ludmann",
+        "email" : "hludmannd@angelfire.com",
+        "gender" : "Male",
+        "ip_address" : "52.184.35.24",
+        "age" : 14
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c3d"),
+        "first_name" : "Ulysses",
+        "last_name" : "Alessandrini",
+        "email" : "ualessandrinih@go.com",
+        "gender" : "Male",
+        "ip_address" : "230.225.232.31",
+        "age" : 18
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c3f"),
+        "first_name" : "Jase",
+        "last_name" : "MacIlory",
+        "email" : "jmaciloryj@clickbank.net",
+        "gender" : "Male",
+        "ip_address" : "116.231.171.101",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c43"),
+        "first_name" : "Kennie",
+        "last_name" : "Westney",
+        "email" : "kwestneyn@soup.io",
+        "gender" : "Male",
+        "ip_address" : "134.160.214.165",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c45"),
+        "first_name" : "Berkie",
+        "last_name" : "Gricewood",
+        "email" : "bgricewoodp@i2i.jp",
+        "gender" : "Genderqueer",
+        "ip_address" : "238.83.72.70",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c47"),
+        "first_name" : "Cortie",
+        "last_name" : "Axtens",
+        "email" : "caxtensr@webs.com",
+        "gender" : "Male",
+        "ip_address" : "73.137.138.205",
+        "age" : 28
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c48"),
+        "first_name" : "Jocko",
+        "last_name" : "Selborne",
+        "email" : "jselbornes@sphinn.com",
+        "gender" : "Male",
+        "ip_address" : "87.47.210.189",
+        "age" : 29
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c49"),
+        "first_name" : "Royal",
+        "last_name" : "Cragell",
+        "email" : "rcragellt@eepurl.com",
+        "gender" : "Male",
+        "ip_address" : "50.201.93.91",
+        "age" : 30
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4a"),
+        "first_name" : "Seumas",
+        "last_name" : "Madgin",
+        "email" : "smadginu@icio.us",
+        "gender" : "Male",
+        "ip_address" : "238.243.255.182",
+        "age" : 31
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4b"),
+        "first_name" : "Ellsworth",
+        "last_name" : "Ainscough",
+        "email" : "eainscoughv@yellowbook.com",
+        "gender" : "Male",
+        "ip_address" : "76.24.37.129",
+        "age" : 32
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4c"),
+        "first_name" : "Garvey",
+        "last_name" : "Detloff",
+        "email" : "gdetloffw@wordpress.com",
+        "gender" : "Male",
+        "ip_address" : "3.24.59.107",
+        "age" : 33
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4d"),
+        "first_name" : "Casey",
+        "last_name" : "Orta",
+        "email" : "cortax@mapquest.com",
+        "gender" : "Male",
+        "ip_address" : "209.118.55.143",
+        "age" : 34
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c51"),
+        "first_name" : "Taylor",
+        "last_name" : "Gerson",
+        "email" : "tgerson11@va.gov",
+        "gender" : "Male",
+        "ip_address" : "56.181.170.11",
+        "age" : 38
+}
+Type "it" for more
+> db.users.insert({"first_name":"Gireeshkumar"})\
+uncaught exception: SyntaxError: invalid escape sequence :
+@(shell):1:46
+> db.users.insert({"first_name":"Gireeshkumar"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insertMany({"first_name":"mahi","last_name":"komme"},{"first_name":"lakshmi","pacha"},")
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:93
+> db.users.insertMany({"first_name":"mahi","last_name":"komme"},{"first_name":"lakshmi","pacha"},"first_name":"indu","last_name":"ediga")
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:93
+> db.users.insertMany({"first_name":"mahi","last_name":"komme"},{"first_name":"lakshmi","pacha"},{"first_name":"indu","last_name":"ediga"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:93
+> db.users.insertMany([{"first_name":"mahi","last_name":"komme"},{"first_name":"lakshmi","pacha"},{"first_name":"indu","last_name":"ediga"}])
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:94
+> db.users.insertMany([{"first_name":"mahi","last_name":"komme"},{"first_name":"lakshmi","last_name":"pacha"},{"first_name":"indu","last_name":"ediga"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62458509153da49549a7673b"),
+                ObjectId("62458509153da49549a7673c"),
+                ObjectId("62458509153da49549a7673d")
+        ]
+}
+> db.users.findOne({first_name":"indu"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:28
+> db.users.find({first_name":"indu"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:25
+> db.users.find({"first_name":"indu"})
+{ "_id" : ObjectId("62458509153da49549a7673d"), "first_name" : "indu", "last_name" : "ediga" }
+> db.users.find({"first_name":"indu"}).pretty()
+{
+        "_id" : ObjectId("62458509153da49549a7673d"),
+        "first_name" : "indu",
+        "last_name" : "ediga"
+}
+> db.users.findMany({"gender":"Male"}).pretty()
+uncaught exception: TypeError: db.users.findMany is not a function :
+@(shell):1:1
+> db.users.find({"gender":"Male"}).pretty()
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c2d"),
+        "first_name" : "Court",
+        "last_name" : "Torrans",
+        "email" : "ctorrans1@youtube.com",
+        "gender" : "Male",
+        "ip_address" : "144.110.164.136",
+        "age" : 2
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c2e"),
+        "first_name" : "Calv",
+        "last_name" : "Haquard",
+        "email" : "chaquard2@ox.ac.uk",
+        "gender" : "Male",
+        "ip_address" : "69.242.5.214",
+        "age" : 3
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c33"),
+        "first_name" : "Farrel",
+        "last_name" : "Lamplough",
+        "email" : "flamplough7@1und1.de",
+        "gender" : "Male",
+        "ip_address" : "90.103.15.134",
+        "age" : 8
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c39"),
+        "first_name" : "Hamlen",
+        "last_name" : "Ludmann",
+        "email" : "hludmannd@angelfire.com",
+        "gender" : "Male",
+        "ip_address" : "52.184.35.24",
+        "age" : 14
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c3d"),
+        "first_name" : "Ulysses",
+        "last_name" : "Alessandrini",
+        "email" : "ualessandrinih@go.com",
+        "gender" : "Male",
+        "ip_address" : "230.225.232.31",
+        "age" : 18
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c3f"),
+        "first_name" : "Jase",
+        "last_name" : "MacIlory",
+        "email" : "jmaciloryj@clickbank.net",
+        "gender" : "Male",
+        "ip_address" : "116.231.171.101",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c43"),
+        "first_name" : "Kennie",
+        "last_name" : "Westney",
+        "email" : "kwestneyn@soup.io",
+        "gender" : "Male",
+        "ip_address" : "134.160.214.165",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c47"),
+        "first_name" : "Cortie",
+        "last_name" : "Axtens",
+        "email" : "caxtensr@webs.com",
+        "gender" : "Male",
+        "ip_address" : "73.137.138.205",
+        "age" : 28
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c48"),
+        "first_name" : "Jocko",
+        "last_name" : "Selborne",
+        "email" : "jselbornes@sphinn.com",
+        "gender" : "Male",
+        "ip_address" : "87.47.210.189",
+        "age" : 29
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c49"),
+        "first_name" : "Royal",
+        "last_name" : "Cragell",
+        "email" : "rcragellt@eepurl.com",
+        "gender" : "Male",
+        "ip_address" : "50.201.93.91",
+        "age" : 30
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4a"),
+        "first_name" : "Seumas",
+        "last_name" : "Madgin",
+        "email" : "smadginu@icio.us",
+        "gender" : "Male",
+        "ip_address" : "238.243.255.182",
+        "age" : 31
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4b"),
+        "first_name" : "Ellsworth",
+        "last_name" : "Ainscough",
+        "email" : "eainscoughv@yellowbook.com",
+        "gender" : "Male",
+        "ip_address" : "76.24.37.129",
+        "age" : 32
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4c"),
+        "first_name" : "Garvey",
+        "last_name" : "Detloff",
+        "email" : "gdetloffw@wordpress.com",
+        "gender" : "Male",
+        "ip_address" : "3.24.59.107",
+        "age" : 33
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c4d"),
+        "first_name" : "Casey",
+        "last_name" : "Orta",
+        "email" : "cortax@mapquest.com",
+        "gender" : "Male",
+        "ip_address" : "209.118.55.143",
+        "age" : 34
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c51"),
+        "first_name" : "Taylor",
+        "last_name" : "Gerson",
+        "email" : "tgerson11@va.gov",
+        "gender" : "Male",
+        "ip_address" : "56.181.170.11",
+        "age" : 38
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c52"),
+        "first_name" : "Dilan",
+        "last_name" : "Lesor",
+        "email" : "dlesor12@google.de",
+        "gender" : "Male",
+        "ip_address" : "15.180.125.30",
+        "age" : 39
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c53"),
+        "first_name" : "Stu",
+        "last_name" : "Durnell",
+        "email" : "sdurnell13@google.nl",
+        "gender" : "Male",
+        "ip_address" : "165.44.36.140",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c54"),
+        "first_name" : "Garvey",
+        "last_name" : "Irnys",
+        "email" : "girnys14@biglobe.ne.jp",
+        "gender" : "Male",
+        "ip_address" : "108.58.106.97",
+        "age" : 41
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c56"),
+        "first_name" : "Cyrus",
+        "last_name" : "Waddie",
+        "email" : "cwaddie16@rakuten.co.jp",
+        "gender" : "Male",
+        "ip_address" : "172.129.86.200",
+        "age" : 43
+}
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c58"),
+        "first_name" : "Travis",
+        "last_name" : "Dederick",
+        "email" : "tdederick18@admin.ch",
+        "gender" : "Male",
+        "ip_address" : "170.35.98.131",
+        "age" : 45
+}
+Type "it" for more
+> db.users.findOne({"first_name":"indu"}).pretty()
+uncaught exception: TypeError: db.users.findOne(...).pretty is not a function :
+@(shell):1:1
+> db.users.findOne({"first_name":"indu"}).pretty()
+uncaught exception: TypeError: db.users.findOne(...).pretty is not a function :
+@(shell):1:1
+> db.users.findOne({"first_name":"Travis"}).pretty()
+uncaught exception: TypeError: db.users.findOne(...).pretty is not a function :
+@(shell):1:1
+> db.users.findOne({"first_name":"Travis"})
+{
+        "_id" : ObjectId("6244940a6ce808e562a17c58"),
+        "first_name" : "Travis",
+        "last_name" : "Dederick",
+        "email" : "tdederick18@admin.ch",
+        "gender" : "Male",
+        "ip_address" : "170.35.98.131",
+        "age" : 45
+}
+> db.users.findOne({"first_name":"indu"})
+{
+        "_id" : ObjectId("62458509153da49549a7673d"),
+        "first_name" : "indu",
+        "last_name" : "ediga"
+}
+> db.users.update({"first_name":"indu"},{$set:{"last_name":"ediga","gender":"Male"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.updateMany({"first_name":"indu"},{$set:{"last_name":"ediga","gender":"Male","age":56}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.users.delete({"first_name":"Travis"})
+uncaught exception: TypeError: db.users.delete is not a function :
+@(shell):1:1
+> db.users.deleteOne({last_naem:"Dederick"})
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.users.deleteOne({last_name:"Dederick"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.remove({last_name:"Dederick"})
+WriteResult({ "nRemoved" : 0 })
+> db.users.deleteOne({gender:"female"})
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.users.deleteMany(gender:"Female")
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:26
+> db.users.deleteMany({gender:"Female"})
+{ "acknowledged" : true, "deletedCount" : 0 }
+>
+
+
+
+
+
+
